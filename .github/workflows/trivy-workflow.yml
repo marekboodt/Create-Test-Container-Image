@@ -1,0 +1,24 @@
+name: Trivy Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Build image
+        # run: docker build -t test-image:latest .
+        run: docker build -t test-image:latest ./docker
+      
+      - name: Run Trivy scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'test-image:latest'
+          format: 'table'
+          severity: 'HIGH,CRITICAL'
