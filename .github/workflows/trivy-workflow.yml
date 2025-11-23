@@ -12,39 +12,49 @@ permissions:
   security-events: write
 
 jobs:
-  scan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+  container-scan:
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/container-scan-workflow.yml@main
+    with:
+      image-name: mijn-app
+      image-tag: latest
+      dockerfile-path: ./
+      base-image: ubuntu  # Laadt ubuntu.trivyignore
+      environment: non-prod
+
+# jobs:
+#   scan:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
       
-      - name: Build image
-        # run: docker build -t test-image:latest .
-        run: docker build -t test-image:latest ./docker
+#       - name: Build image
+#         # run: docker build -t test-image:latest .
+#         run: docker build -t test-image:latest ./docker
       
-      - name: Run Trivy scan
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: 'test-image:latest'
-          format: 'table'
-          severity: 'HIGH,CRITICAL'
+#       - name: Run Trivy scan
+#         uses: aquasecurity/trivy-action@master
+#         with:
+#           image-ref: 'test-image:latest'
+#           format: 'table'
+#           severity: 'HIGH,CRITICAL'
 
       
-      - name: Run Trivy scan Sarif
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: 'test-image:latest'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-          severity: 'CRITICAL'
-          # exit-code: '1'
+#       - name: Run Trivy scan Sarif
+#         uses: aquasecurity/trivy-action@master
+#         with:
+#           image-ref: 'test-image:latest'
+#           format: 'sarif'
+#           output: 'trivy-results.sarif'
+#           severity: 'CRITICAL'
+#           # exit-code: '1'
 
-      - name: Upload SARIF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: trivy-results
-          path: trivy-results.sarif
+#       - name: Upload SARIF file
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: trivy-results
+#           path: trivy-results.sarif
       
-      - name: Upload to GitHub Security
-        uses: github/codeql-action/upload-sarif@v4
-        with:
-          sarif_file: trivy-results.sarif
+#       - name: Upload to GitHub Security
+#         uses: github/codeql-action/upload-sarif@v4
+#         with:
+#           sarif_file: trivy-results.sarif
