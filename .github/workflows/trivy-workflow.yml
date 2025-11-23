@@ -15,9 +15,9 @@ jobs:
   container-scan:
     uses: marekboodt/Security-Scanning-Repo/.github/workflows/10-container-scan-workflow.yml@main
     with:
-      image-name: mijn-app
+      image-name: my-trivy-test-app
       image-tag: latest
-      dockerfile-path: ./
+      dockerfile-path: ./docker
       exception-profile: ubuntu  # Laadt ubuntu.trivyignore
       environment: non-prod
 
