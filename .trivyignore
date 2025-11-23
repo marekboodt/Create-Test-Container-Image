@@ -7,6 +7,12 @@
 # Last review: YYYY-MM-DD
 # Next review: YYYY-MM-DD
 # =============================================================================
+# USE THIS FILE FOR:
+# =============================================================================
+# - Application dependencies (npm, pip, maven, etc)
+# - Temporary exceptions (with Expires date!)
+# - Context-specific issues
+# =============================================================================
 # TEMPLATE - Copy when adding new exception
 # =============================================================================
 # CVE-YYYY-XXXXX  # Reason | Owner/Team | Date added YYYY-MM-DD | Review/Expire Date YYYY-MM-DD
@@ -22,37 +28,6 @@ CVE-2017-16119  # TESTING | Owner/Team | Date added YYYY-MM-DD| Review/Expire Da
 # =============================================================================
 
 
-
-
-# USE THIS FILE FOR:
-# - Application dependencies (npm, pip, maven, etc)
-# - Temporary exceptions (with Expires date!)
-# - Context-specific issues
-#
-# DO NOT ADD:
-# - OS/kernel issues - make Pull Request into the global/base image exception list. The security Team will review and can add it for everyone. 
-# - Issues already in global.trivyignore
-# =============================================================================
-# GOOD EXAMPLES:
-# CVE-2024-12345  # Not exploitable - API disabled in prod | Dev Team | 2024-11-22 | Review 2025-05-01
-# CVE-2024-67890  # Library EOL - replacement in sprint 45 | Dev Team | 2024-11-22 | Expires 2025-03-15
-#
-# BAD EXAMPLES:
-# CVE-2024-12345  # TODO
-# CVE-2024-12345  # Accepted
-# CVE-2024-12345  # Will fix later
-
-
-# =============================================================================
-# FALSE POSITIVES TESTING - Not exploitable in our context
-# =============================================================================
-CVE-2024-11111  # Feature disabled via env var | Dev Team | 2024-11-22 | Review 2025-05-01
-CVE-2017-16119  # TESTING | Owner/Team | Date added YYYY-MM-DD| Review/Expire Date YYYY-MM-DD
-
-# =============================================================================
-# DEPENDENCIES - Upgrade planned
-# =============================================================================
-CVE-2023-99999  # express@3.0.0 - migrate to v4 in Q2 2025 | Dev Team | 2024-11-22 | Expires 2025-06-30
 
 
 
