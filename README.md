@@ -71,9 +71,6 @@ CVE-2023-99999  # express@3 - upgrade Q2 2025 | Dev Team | 2024-11-23 | Expires 
 CVE-2024-12345  # Accepted
 CVE-2024-12345  # Will fix later
 ```
-CVE-2024-12345  # Feature disabled in config | Dev Team | 2024-11-23 | Review 2025-05-01
-CVE-2023-99999  # express@3 - upgrade Q2 2025 | Dev Team | 2024-11-23 | Expires 2025-06-30
-```
 
 ### DO NOT ADD:
 - OS/kernel issues - make Pull Request into the global/base image exception list. The security Team will review and can add it for everyone. 
