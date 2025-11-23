@@ -1,4 +1,4 @@
-# MAIN.yml  
+# MAIN.yml
 name: Trivy Scan
 
 on:
