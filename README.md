@@ -58,8 +58,18 @@ jobs:
 CVE-YYYY-XXXXX  # Reason | Owner/Team | Date added YYYY-MM-DD | Review/Expire YYYY-MM-DD
 ```
 
-### Examples
+### Good Examples
 
+```
+CVE-2024-12345  # Feature disabled in config | Dev Team | 2024-11-23 | Review 2025-05-01
+CVE-2023-99999  # express@3 - upgrade Q2 2025 | Dev Team | 2024-11-23 | Expires 2025-06-30
+```
+
+### BAD Examples
+
+```
+CVE-2024-12345  # Accepted
+CVE-2024-12345  # Will fix later
 ```
 CVE-2024-12345  # Feature disabled in config | Dev Team | 2024-11-23 | Review 2025-05-01
 CVE-2023-99999  # express@3 - upgrade Q2 2025 | Dev Team | 2024-11-23 | Expires 2025-06-30
