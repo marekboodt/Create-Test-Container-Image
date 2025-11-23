@@ -55,7 +55,7 @@ jobs:
 ### Format
 
 ```
-CVE-YYYY-XXXXX  # Reason | Team | YYYY-MM-DD | Review/Expire YYYY-MM-DD
+CVE-YYYY-XXXXX  # Reason | Owner/Team | Date added YYYY-MM-DD | Review/Expire YYYY-MM-DD
 ```
 
 ### Examples
