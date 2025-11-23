@@ -1,0 +1,15 @@
+# =============================================================================
+# PROJECT-SPECIFIC EXCEPTIONS - Container-Scanning project
+# =============================================================================
+# Team: TEST PROJECT Team
+# Lead Dev: Name Surname
+# Last review: 2025-11-22
+# =============================================================================
+# CVE-YYYY-ABCDE # <REASON> | Job Role | Date | review Date
+# =============================================================================
+
+# Python dependency issue - false positive
+CVE-2024-11111  # Not exploitable in our use case | Dev Team | 2024-11-22 | Review 2025-01-01
+
+# Legacy library - accepted until migration Qx 2030
+CVE-2023-99999  # express@3.0.0 - migration planned | Product Owner | 2024-11-22 | Expires 2025-06-30
